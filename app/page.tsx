@@ -344,18 +344,34 @@ function HeroSection() {
             through forensic classification, payment integrity audits, and buying behavior optimization.
           </p>
           <p className="text-base md:text-lg text-gray-500 mb-10 max-w-2xl">
-            {"The Capital Leakage Diagnostic transforms fragmented spend into quantifiable capital, using specialized audit layers designed to surface high-impact exposure in growth-stage organizations."}
+            {"Our Capital Leakage Diagnostic delivers boardroom-ready findings with named vendors, dollar amounts, and a prioritized recovery roadmap."}
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <CTAButton href="#audit" className="text-base">
-              Start Your Assessment
+              Request Your Free Diagnostic
             </CTAButton>
             <GhostButton href="#solution">
               See How It Works
             </GhostButton>
           </div>
+
+          {/* Trust signals */}
+          <div className="flex flex-wrap gap-6 md:gap-10">
+            {[
+              { icon: Shield, label: "Forensic Procurement Authority" },
+              { icon: Lock, label: "Enterprise-Grade Security" },
+              { icon: Clock, label: "Findings in 72 Hours" },
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2 text-gray-500 text-sm font-medium">
+                <Icon size={16} className="text-navy" />
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Scroll indicator */}
       <a
@@ -379,8 +395,8 @@ function OpportunitySection() {
       stat: "8–12%",
       label: "of addressable spend recoverable annually",
       detail:
-        "Systemic efficiency gains through classification accuracy, payment integrity, and AI-driven behavior optimization.",
-      source: "Gartner Strategic Procurement Roadmap, 2026",
+        "Systemic efficiency gains through classification accuracy, payment integrity, and buying behavior optimization.",
+      source: "Gartner Procurement Research, 2024",
     },
     {
       icon: FileSearch,
@@ -388,7 +404,7 @@ function OpportunitySection() {
       label: "of spend data eligible for reclassification",
       detail:
         "Enhanced GL coding accuracy reveals true cost structure and strengthens category management insights.",
-      source: "Deloitte Global CPO Survey, 2025",
+      source: "Deloitte Global CPO Survey, 2024",
     },
     {
       icon: DollarSign,
@@ -396,15 +412,15 @@ function OpportunitySection() {
       label: "in global payment integrity opportunities",
       detail:
         "Forensic invoice analysis surfaces confirmed recovery opportunities your current controls overlook.",
-      source: "KPMG Global Payment Integrity Study, 2025",
+      source: "KPMG Global Payment Integrity Study",
     },
     {
       icon: Target,
-      stat: "75%",
-      label: "of leaders deploying autonomous AI agents",
+      stat: "61%",
+      label: "of enterprises benefit from buying behavior mapping",
       detail:
-        "Comprehensive visibility into purchasing patterns through agentic workflows unlocks negotiation leverage.",
-      source: "Gartner Procurement Hype Cycle, 2026",
+        "Comprehensive visibility into purchasing patterns unlocks negotiation leverage and contract compliance.",
+      source: "EY Procurement Excellence Report",
     },
   ];
 
@@ -1284,17 +1300,15 @@ function SocialProofBar() {
     <div className="bg-gray-50 border-y border-gray-200 py-8">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <p className="text-center text-gray-400 text-xs uppercase tracking-widest font-semibold mb-6">
-          Built on 25 Years of Trust from Leaders at
+          Trusted by Finance & Procurement Leaders at
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {[
-            "Financial Services",
-            "Technology & SaaS",
-            "Healthcare/Pharma",
+            "Fortune 500 Healthcare",
             "Global Manufacturing",
             "Private Equity Portfolio",
-            "Retail & Consumer Goods",
-            "Startups",
+            "Series D Technology",
+            "Federal Contractors",
           ].map((name) => (
             <div key={name} className="text-gray-300 font-black text-sm md:text-base tracking-tight uppercase">
               {name}
