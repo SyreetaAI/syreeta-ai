@@ -17,8 +17,7 @@
     "clsx": "latest",
     "tailwind-merge": "latest",
     "class-variance-authority": "latest",
-    "@vercel/analytics": "latest",
-    "@vercel/speed-insights": "latest"
+    "@vercel/analytics": "latest"
   },
   "devDependencies": {
     "typescript": "latest",
@@ -27,6 +26,7 @@
     "@types/react-dom": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
+    "autoprefixer": "latest",
     "@tailwindcss/postcss": "latest"
   }
 }
