@@ -317,7 +317,7 @@ function HeroSection() {
           <h1 className="font-black text-4xl md:text-6xl lg:text-7xl text-navy leading-tight tracking-tight mb-6 text-balance">
             Quantify{" "}
             <span className="text-orange relative">
-              Recoverable Capital
+              Hidden Spend
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
