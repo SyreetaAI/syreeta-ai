@@ -3,10 +3,8 @@ import {
   ShieldCheck, 
   BarChart3, 
   Search, 
-  Zap, 
   ArrowRight, 
   CheckCircle2, 
-  Users, 
   Award, 
   Briefcase,
   Lock,
@@ -35,8 +33,8 @@ export default function LandingPage() {
             SYREETA<span className="text-orange">.AI</span>
           </div>
           <div className="hidden md:flex gap-8 items-center text-sm font-medium">
-            <a href="#opportunity" className="hover:text-orange transition-colors">The Opportunity</a>
-            <a href="#approach" className="hover:text-orange transition-colors">The Strategy</a>
+            <a href="#opportunity" className="hover:text-orange transition-colors">Opportunity</a>
+            <a href="#approach" className="hover:text-orange transition-colors">Strategy</a>
             <a href="#about" className="hover:text-orange transition-colors">About</a>
             <button className="bg-navy text-white px-6 py-2 rounded-full hover:bg-orange transition-all font-bold">
               Inquire
@@ -76,7 +74,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Opportunity - Exact References Added */}
+      {/* Opportunity - Exact References */}
       <section id="opportunity" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-black text-navy mb-16 text-center">The Risk of Inaction</h2>
@@ -85,18 +83,18 @@ export default function LandingPage() {
               {
                 stat: "80%",
                 text: "of organizations face significant AI integration hurdles due to poor data sourcing.",
-                source: "Gartner 2024 Strategic Planning Report",
+                source: "Gartner 2024 Strategic Planning",
                 url: "https://www.gartner.com"
               },
               {
                 stat: "$4.45M",
-                text: "Average cost of a data breach in 2024, often triggered by unvetted third-party AI tools.",
-                source: "IBM Cost of a Data Breach Report",
+                text: "Average cost of a data breach in 2024, often triggered by unvetted third-party tools.",
+                source: "IBM Cost of a Data Breach",
                 url: "https://www.ibm.com/reports/data-breach"
               },
               {
                 stat: "30%",
-                text: "Expected productivity gap between AI-enabled firms and legacy competitors by 2026.",
+                text: "Productivity gap between AI-enabled firms and legacy competitors by 2026.",
                 source: "McKinsey Global Institute",
                 url: "https://www.mckinsey.com/mgi"
               }
@@ -104,7 +102,7 @@ export default function LandingPage() {
               <div key={i} className="bg-white p-8 rounded-3xl border border-slate-200">
                 <div className="text-4xl font-black text-orange mb-4">{item.stat}</div>
                 <p className="text-slate-600 mb-6 font-medium">{item.text}</p>
-                <a href={item.url} target="_blank" className="text-xs font-bold text-navy hover:text-orange uppercase tracking-widest flex items-center gap-1">
+                <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-navy hover:text-orange uppercase tracking-widest flex items-center gap-1">
                   Reference: {item.source} <ArrowRight size={12} />
                 </a>
               </div>
@@ -113,7 +111,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Approach - Cleaned up dashes & unnecessary boxes */}
+      {/* Strategy - Clean and Succinct */}
       <section id="approach" className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -127,14 +125,14 @@ export default function LandingPage() {
                   <div className="mt-1 text-orange"><CheckCircle2 size={24} /></div>
                   <div>
                     <h4 className="font-bold text-navy">Localized Processing</h4>
-                    <p className="text-slate-500">I perform all forensic work outside the cloud, either on my secure local environment or directly within your infrastructure.</p>
+                    <p className="text-slate-500">I perform all forensic work outside the cloud, either on secure local hardware or directly within your environment.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="mt-1 text-orange"><CheckCircle2 size={24} /></div>
                   <div>
                     <h4 className="font-bold text-navy">Prosci® Transitioning</h4>
-                    <p className="text-slate-500">I don't just deploy tech; I lead the people through the change to ensure 100% adoption.</p>
+                    <p className="text-slate-500">I lead the people through the change to ensure 100% adoption and long-term success.</p>
                   </div>
                 </div>
               </div>
@@ -160,19 +158,19 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Diagnostic - Minimalist & Artifact-focused */}
+      {/* Diagnostic - Artifact Focused */}
       <section className="py-24 bg-navy text-white rounded-[4rem] mx-4 mb-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-black mb-6 tracking-tighter">The Executive Diagnostic</h2>
           <p className="text-slate-400 text-lg mb-12">
-            A high-level scan of your current risk profile. Detailed modules and the forensic roadmap are provided as a custom artifact following our discovery call.
+            A high-level scan of your risk profile. Detailed modules and the forensic roadmap are provided as a custom artifact following our discovery call.
           </p>
           <div className="space-y-4">
-            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10">
+            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10 text-left">
               <span className="font-bold">AI Sourcing Forensic Audit</span>
               <span className="text-orange font-mono text-sm uppercase tracking-widest">Available</span>
             </div>
-            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10">
+            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10 text-left">
               <span className="font-bold">Contract Integrity Analysis</span>
               <span className="text-orange font-mono text-sm uppercase tracking-widest">Available</span>
             </div>
@@ -198,11 +196,11 @@ export default function LandingPage() {
               I am a solo executive consultant. I don't maintain a bloated staff or bill you for junior associates. When you hire me, you get 25 years of Fortune 500 experience directly.
             </p>
             <p className="text-lg text-slate-600 mb-8">
-              To deliver at scale, I deploy a custom-built digital workforce: autonomous AI agents with specialized personalities that handle data-heavy forensic tasks. This allows me to provide C-suite level output at a fraction of the traditional cost.
+              To deliver at scale, I deploy a custom-built digital workforce: autonomous AI agents with specialized personalities that handle data-heavy forensic tasks.
             </p>
             <div className="flex items-center gap-4 p-4 bg-orange-50 rounded-xl border border-orange-100">
                <Lock className="text-orange" size={24} />
-               <span className="text-sm font-bold text-navy">Work is processed locally on secure air-gapped hardware.</span>
+               <span className="text-sm font-bold text-navy">Work is processed locally on secure hardware.</span>
             </div>
           </div>
         </div>
