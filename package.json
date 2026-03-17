@@ -1,5 +1,9 @@
 {
-  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "lucide-react": "latest",
     "react": "latest",
@@ -9,5 +13,11 @@
     "@tailwindcss/postcss": "latest",
     "postcss": "latest",
     "autoprefixer": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
   }
 }
