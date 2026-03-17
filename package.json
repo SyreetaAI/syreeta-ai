@@ -1,0 +1,7 @@
+{
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "dependencies": {
+    "lucide-react": "latest", "react": "latest", "react-dom": "latest",
+    "next": "latest", "tailwindcss": "latest", "postcss": "latest", "autoprefixer": "latest"
+  }
+}
