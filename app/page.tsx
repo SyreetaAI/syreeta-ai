@@ -57,11 +57,11 @@ const NAV_LINKS = [
 ];
 
 const SPEND_OPTIONS = [
-  "$10M – $50M",
-  "$50M – $100M",
-  "$100M – $250M",
-  "$250M – $500M",
-  "$500M+",
+ "Under $500k",
+  "$500k – $1M",
+  "$1M – $2M",
+  "$2.5M – $5M",
+  "$5M+",
 ];
 
 // ─── Utility ──────────────────────────────────────────────────────────────────
@@ -315,9 +315,9 @@ function HeroSection() {
 
           {/* Headline */}
           <h1 className="font-black text-4xl md:text-6xl lg:text-7xl text-navy leading-tight tracking-tight mb-6 text-balance">
-            Recover{" "}
+            Quantify{" "}
             <span className="text-orange relative">
-              Hidden Capital
+              Recoverable Capital
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
@@ -334,7 +334,7 @@ function HeroSection() {
               </svg>
             </span>{" "}
             <br className="hidden md:block" />
-            in 72 Hours.
+            in One Briefing.
           </h1>
 
           {/* Subheadline */}
