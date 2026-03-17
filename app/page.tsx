@@ -50,15 +50,15 @@ export default function LandingPage() {
             <Briefcase size={14} /> Global Procurement Authority
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-navy leading-[0.85] mb-8 tracking-tighter">
-            C-Suite Strategy.<br />
-            <span className="text-orange">For the Masses.</span>
+            CFO-Level Oversight. CPO-Level Agility.<br />
+            <span className="text-orange">Accessible to All.</span>
           </h1>
           <p className="max-w-2xl mx-auto text-xl text-slate-600 mb-10 leading-relaxed">
-            Twenty-five years of Fortune 500 procurement expertise and Prosci® change leadership, now available as your on-demand executive partner.
+            Twenty-five years of Fortune 100 procurement expertise and Prosci® change leadership, now available as your on-demand executive partner.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button className="bg-orange text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl shadow-orange/30 hover:scale-105 transition-all flex items-center justify-center gap-2">
-              Start Your Audit <ArrowRight size={20} />
+              Start Your Assessement <ArrowRight size={20} />
             </button>
           </div>
         </div>
@@ -67,120 +67,208 @@ export default function LandingPage() {
       {/* Trust Bar */}
       <section className="border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-12">
-          <TrustBadge icon={Award} label="25+ Years" sublabel="Sourcing Excellence" />
-          <TrustBadge icon={ShieldCheck} label="Prosci®" sublabel="Certified Change Lead" />
-          <TrustBadge icon={BarChart3} label="$10B+" sublabel="Managed Spend" />
-          <TrustBadge icon={Cpu} label="AI Native" sublabel="Digital Workforce" />
+          <TrustBadge icon={Award} label="25+ Years" sublabel="Strategic Procurement Excellence" />
+          <TrustBadge icon={ShieldCheck} label="Prosci®" sublabel="Certified Change Practitioner" />
+          <TrustBadge icon={BarChart3} label="$10B+" sublabel="Managed Spend Portfolios" />
+          <TrustBadge icon={Cpu} label="AI Native" sublabel="Intelligent Automation" />
         </div>
       </section>
 
-      {/* Opportunity - Exact References */}
-      <section id="opportunity" className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-black text-navy mb-16 text-center">The Risk of Inaction</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                stat: "80%",
-                text: "of organizations face significant AI integration hurdles due to poor data sourcing.",
-                source: "Gartner 2024 Strategic Planning",
-                url: "https://www.gartner.com"
-              },
-              {
-                stat: "$4.45M",
-                text: "Average cost of a data breach in 2024, often triggered by unvetted third-party tools.",
-                source: "IBM Cost of a Data Breach",
-                url: "https://www.ibm.com/reports/data-breach"
-              },
-              {
-                stat: "30%",
-                text: "Productivity gap between AI-enabled firms and legacy competitors by 2026.",
-                source: "McKinsey Global Institute",
-                url: "https://www.mckinsey.com/mgi"
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-3xl border border-slate-200">
-                <div className="text-4xl font-black text-orange mb-4">{item.stat}</div>
-                <p className="text-slate-600 mb-6 font-medium">{item.text}</p>
-                <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-navy hover:text-orange uppercase tracking-widest flex items-center gap-1">
-                  Reference: {item.source} <ArrowRight size={12} />
-                </a>
-              </div>
-            ))}
+    {/* The Opportunity: Systemic Efficiency & 2026 Forecast */}
+<section id="opportunity" className="py-24 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-black text-navy mb-4 tracking-tighter uppercase">
+        Unlock Systemic Efficiency
+      </h2>
+      <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
+        Every enterprise has recoverable capital within reach. My 2026 framework targets the gap between legacy procurement and agentic AI.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      {[
+        {
+          stat: "8–12%",
+          title: "Recoverable Spend",
+          desc: "Annual addressable spend recoverable through classification and payment integrity.",
+          source: "Gartner Procurement Research",
+          url: "https://www.gartner.com/en/procurement"
+        },
+        {
+          stat: "34%",
+          title: "Data Reclassification",
+          desc: "Spend data eligible for coding accuracy to reveal true cost structures.",
+          source: "Deloitte Global CPO Survey",
+          url: "https://www2.deloitte.com/us/en/pages/operations/articles/cpo-survey.html"
+        },
+        {
+          stat: "$1.4T",
+          title: "Integrity Gap",
+          desc: "Confirmed recovery opportunities in global payments overlooked by standard controls.",
+          source: "KPMG Operations Advisory",
+          url: "https://advisory.kpmg.us/services/operations-consulting/procurement-advisory.html"
+        },
+        {
+          stat: "61%",
+          title: "Behavioral ROI",
+          desc: "Enterprises seeing direct leverage from behavior mapping and contract compliance.",
+          source: "EY Supply Chain Excellence",
+          url: "https://www.ey.com/en_gl/supply-chain"
+        }
+      ].map((item, i) => (
+        <div key={i} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div className="text-4xl font-black text-orange mb-2">{item.stat}</div>
+            <h4 className="text-navy font-bold mb-4 uppercase text-[10px] tracking-[0.2em]">{item.title}</h4>
+            <p className="text-slate-600 text-sm leading-relaxed mb-6">
+              {item.desc}
+            </p>
           </div>
+          <a 
+            href={item.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[10px] font-black text-navy/40 hover:text-orange transition-colors uppercase tracking-widest flex items-center gap-1 mt-auto"
+          >
+            VIEW STUDY <ArrowRight size={10} />
+          </a>
         </div>
-      </section>
+      ))}
+    </div>
 
-      {/* Strategy - Clean and Succinct */}
-      <section id="approach" className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl font-black text-navy mb-8 tracking-tighter">The Strategy</h2>
-              <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-                I leverage a unique blend of human institutional knowledge and autonomous AI agents to audit, optimize, and secure your procurement pipeline.
-              </p>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 text-orange"><CheckCircle2 size={24} /></div>
-                  <div>
-                    <h4 className="font-bold text-navy">Localized Processing</h4>
-                    <p className="text-slate-500">I perform all forensic work outside the cloud, either on secure local hardware or directly within your environment.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 text-orange"><CheckCircle2 size={24} /></div>
-                  <div>
-                    <h4 className="font-bold text-navy">Prosci® Transitioning</h4>
-                    <p className="text-slate-500">I lead the people through the change to ensure 100% adoption and long-term success.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-navy rounded-3xl p-12 text-white shadow-2xl">
-              <h3 className="text-2xl font-bold mb-8">Verified Outcomes</h3>
-              <div className="space-y-8">
-                <div>
-                  <div className="text-3xl font-black text-orange">$10B+</div>
-                  <div className="text-slate-400">Directly managed spend for Fortune 500 institutions.</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-black text-orange">20-30%</div>
-                  <div className="text-slate-400">Typical efficiency gains in procurement cycles post-audit.</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-black text-orange">Zero-Leakage</div>
-                  <div className="text-slate-400">Contract compliance standard for all forensic engagements.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Diagnostic - Artifact Focused */}
-      <section className="py-24 bg-navy text-white rounded-[4rem] mx-4 mb-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-black mb-6 tracking-tighter">The Executive Diagnostic</h2>
-          <p className="text-slate-400 text-lg mb-12">
-            A high-level scan of your risk profile. Detailed modules and the forensic roadmap are provided as a custom artifact following our discovery call.
+    {/* 2026 Specific Forecast Block */}
+    <div className="grid md:grid-cols-2 gap-8">
+      <div className="p-10 bg-navy rounded-[2.5rem] text-white relative overflow-hidden group">
+        <div className="relative z-10">
+          <div className="text-orange font-black text-xs uppercase tracking-[0.3em] mb-4">2026 Agentic Outlook</div>
+          <div className="text-5xl font-black mb-6">75%</div>
+          <p className="text-slate-300 text-lg leading-relaxed mb-8">
+            Of procurement leaders will deploy <strong>Autonomous AI Agents</strong> for tactical sourcing and real-time risk mitigation by end-of-year 2026.
           </p>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10 text-left">
-              <span className="font-bold">AI Sourcing Forensic Audit</span>
-              <span className="text-orange font-mono text-sm uppercase tracking-widest">Available</span>
-            </div>
-            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10 text-left">
-              <span className="font-bold">Contract Integrity Analysis</span>
-              <span className="text-orange font-mono text-sm uppercase tracking-widest">Available</span>
-            </div>
-            <button className="w-full bg-orange py-6 rounded-2xl font-black text-2xl hover:bg-white hover:text-navy transition-all mt-8">
-              REQUEST ACCESS
-            </button>
-          </div>
+          <a href="https://www.gartner.com/en/newsroom" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-orange hover:text-white transition-colors uppercase tracking-widest">
+            Reference: Gartner Strategic Roadmap <ArrowRight size={14} />
+          </a>
         </div>
-      </section>
+      </div>
 
+      <div className="p-10 bg-slate-900 rounded-[2.5rem] text-white relative overflow-hidden group">
+        <div className="relative z-10">
+          <div className="text-orange font-black text-xs uppercase tracking-[0.3em] mb-4">2025 Data Sovereignty</div>
+          <div className="text-5xl font-black mb-6">70%</div>
+          <p className="text-slate-300 text-lg leading-relaxed mb-8">
+            Of CFOs identify <strong>Cloud Security and Data Sovereignty</strong> as the #1 barrier to scaling enterprise AI in 2025.
+          </p>
+          <a href="https://www.pwc.com/us/en/library/cfo-pulse-survey.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-orange hover:text-white transition-colors uppercase tracking-widest">
+            Reference: PwC Global CFO Pulse <ArrowRight size={14} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      // ─── Approach Section ─────────────────────────────────────────────────────────
+
+function ApproachSection() {
+  return (
+    <div id="approach" className="bg-white py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left: copy */}
+          <div>
+            <FadeIn>
+              <SectionLabel>Forensic Procurement Authority</SectionLabel>
+              <h2 className="font-black text-3xl md:text-5xl text-navy leading-tight mb-6 tracking-tight text-balance">
+                Decision-Ready Intelligence.{" "}
+                <span className="text-orange">Value-Driven Governance.</span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Syreeta.ai deploys a proprietary multi-layer diagnostic engine calibrated
+                on hundreds of millions of transactions. Pattern recognition is precise,
+                findings are specific, and the prioritized remediation plan is actionable on day one.
+              </p>
+
+              <ul className="space-y-4 mb-10">
+                {[
+                  "Effortless integration — connect your data, get results",
+                  "Works with SAP, Oracle, Coupa, Ariba, and flat-file exports",
+                  "Findings Executive Readout & debrief from a Senior Procurement Advisor",
+  </p>
+            <div className="flex items-center gap-4 p-4 bg-orange-50 rounded-xl border border-orange-100">
+               <Lock className="text-orange" size={24} />
+               <span className="text-sm font-bold text-navy">We support air-gapped or localized environments.</span>
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700 text-base">
+                    <CheckCircle
+                      size={20}
+                      className="text-orange mt-0.5 flex-shrink-0"
+                      fill="currentColor"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <CTAButton href="#audit">
+                Start the Diagnostic
+              </CTAButton>
+            </FadeIn>
+          </div>
+
+          {/* Right: visual card */}
+          <FadeIn delay={200}>
+            <div className="relative">
+              {/* Main card */}
+              <div className="bg-navy rounded-3xl p-8 md:p-10 shadow-2xl shadow-navy/30">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-white font-bold text-lg">Leakage Exposure Summary</span>
+                  <span className="bg-orange/20 text-orange text-xs font-bold px-3 py-1 rounded-full border border-orange/30">
+                    LIVE ANALYSIS
+                  </span>
+                </div>
+
+                {/* Metrics */}
+                {[
+                  { label: "Misclassified Spend", value: "$4.2M", pct: 72, color: "bg-orange" },
+                  { label: "Duplicate Invoices", value: "$890K", pct: 45, color: "bg-orange-400" },
+                  { label: "Maverick Purchases", value: "$3.1M", pct: 60, color: "bg-orange-300" },
+                  { label: "Contract Leakage", value: "$1.8M", pct: 35, color: "bg-orange-200" },
+                ].map(({ label, value, pct, color }) => (
+                  <div key={label} className="mb-5 last:mb-0">
+                    <div className="flex justify-between text-sm mb-1.5">
+                      <span className="text-gray-300 font-medium">{label}</span>
+                      <span className="text-white font-bold">{value}</span>
+                    </div>
+                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full ${color} rounded-full transition-all duration-1000`}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+
+                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+                  <div>
+                    <div className="text-gray-400 text-xs uppercase tracking-widest mb-1">
+                      Total Identified Leakage
+                    </div>
+                    <div className="text-4xl font-black text-white">
+                      $10.0M
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-gray-400 text-xs uppercase tracking-widest mb-1">
+                      Recovery Potential
+                    </div>
+                    <div className="text-2xl font-black text-orange">
+                      80–95%
+                    </div>
+                  </div>
+                </div>
+              </div>
+ 
       {/* About - Honest Solo Branding */}
       <section id="about" className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
@@ -193,14 +281,10 @@ export default function LandingPage() {
           <div>
             <h2 className="text-4xl font-black text-navy mb-6">About Me</h2>
             <p className="text-lg text-slate-600 mb-6">
-              I am a solo executive consultant. I don't maintain a bloated staff or bill you for junior associates. When you hire me, you get 25 years of Fortune 500 experience directly.
+              I bridge the gap between high-level executive strategy and autonomous AI execution. By acting as an independent partner, you gain direct access to my 25 years of Fortune 100 expertise.
             </p>
             <p className="text-lg text-slate-600 mb-8">
-              To deliver at scale, I deploy a custom-built digital workforce: autonomous AI agents with specialized personalities that handle data-heavy forensic tasks.
-            </p>
-            <div className="flex items-center gap-4 p-4 bg-orange-50 rounded-xl border border-orange-100">
-               <Lock className="text-orange" size={24} />
-               <span className="text-sm font-bold text-navy">Work is processed locally on secure hardware.</span>
+              To deliver at scale, I pair human judgment with autonomous AI agents to offer you unparalleled speed, accuracy, and efficiency.
             </div>
           </div>
         </div>
