@@ -379,8 +379,8 @@ function OpportunitySection() {
       stat: "8–12%",
       label: "of addressable spend recoverable annually",
       detail:
-        "Systemic efficiency gains through classification accuracy, payment integrity, and buying behavior optimization.",
-      source: "Gartner Procurement Research, 2024",
+        "Systemic efficiency gains through classification accuracy, payment integrity, and AI-driven behavior optimization.",
+      source: "Gartner Strategic Procurement Roadmap, 2026",
     },
     {
       icon: FileSearch,
@@ -388,7 +388,7 @@ function OpportunitySection() {
       label: "of spend data eligible for reclassification",
       detail:
         "Enhanced GL coding accuracy reveals true cost structure and strengthens category management insights.",
-      source: "Deloitte Global CPO Survey, 2024",
+      source: "Deloitte Global CPO Survey, 2025",
     },
     {
       icon: DollarSign,
@@ -396,15 +396,15 @@ function OpportunitySection() {
       label: "in global payment integrity opportunities",
       detail:
         "Forensic invoice analysis surfaces confirmed recovery opportunities your current controls overlook.",
-      source: "KPMG Global Payment Integrity Study",
+      source: "KPMG Global Payment Integrity Study, 2025",
     },
     {
       icon: Target,
-      stat: "61%",
-      label: "of enterprises benefit from buying behavior mapping",
+      stat: "75%",
+      label: "of leaders deploying autonomous AI agents",
       detail:
-        "Comprehensive visibility into purchasing patterns unlocks negotiation leverage and contract compliance.",
-      source: "EY Procurement Excellence Report",
+        "Comprehensive visibility into purchasing patterns through agentic workflows unlocks negotiation leverage.",
+      source: "Gartner Procurement Hype Cycle, 2026",
     },
   ];
 
