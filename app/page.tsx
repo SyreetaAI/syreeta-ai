@@ -344,34 +344,18 @@ function HeroSection() {
             through forensic classification, payment integrity audits, and buying behavior optimization.
           </p>
           <p className="text-base md:text-lg text-gray-500 mb-10 max-w-2xl">
-            {"Our Capital Leakage Diagnostic delivers boardroom-ready findings with named vendors, dollar amounts, and a prioritized recovery roadmap."}
+            {"The Capital Leakage Diagnostic transforms fragmented spend into quantifiable capital, using specialized audit layers designed to surface high-impact exposure in growth-stage organizations."}
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <CTAButton href="#audit" className="text-base">
-              Request Your Free Diagnostic
+              Start Your Assessment
             </CTAButton>
             <GhostButton href="#solution">
               See How It Works
             </GhostButton>
           </div>
-
-          {/* Trust signals */}
-          <div className="flex flex-wrap gap-6 md:gap-10">
-            {[
-              { icon: Shield, label: "Forensic Procurement Authority" },
-              { icon: Lock, label: "Enterprise-Grade Security" },
-              { icon: Clock, label: "Findings in 72 Hours" },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-gray-500 text-sm font-medium">
-                <Icon size={16} className="text-navy" />
-                <span>{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Scroll indicator */}
       <a
@@ -1300,15 +1284,17 @@ function SocialProofBar() {
     <div className="bg-gray-50 border-y border-gray-200 py-8">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <p className="text-center text-gray-400 text-xs uppercase tracking-widest font-semibold mb-6">
-          Trusted by Finance & Procurement Leaders at
+          Built on 25 Years of Trust from Leaders at
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {[
-            "Fortune 500 Healthcare",
+            "Financial Services",
+            "Technology & SaaS",
+            "Healthcare/Pharma",
             "Global Manufacturing",
             "Private Equity Portfolio",
-            "Series D Technology",
-            "Federal Contractors",
+            "Retail & Consumer Goods",
+            "Startups",
           ].map((name) => (
             <div key={name} className="text-gray-300 font-black text-sm md:text-base tracking-tight uppercase">
               {name}
