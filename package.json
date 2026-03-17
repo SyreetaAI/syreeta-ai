@@ -9,21 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "lucide-react": "latest",
     "next": "15.1.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "tailwind-merge": "latest",
+    "lucide-react": "latest",
+    "framer-motion": "latest",
     "clsx": "latest",
-    "class-variance-authority": "latest"
+    "tailwind-merge": "latest",
+    "class-variance-authority": "latest",
+    "@vercel/analytics": "latest",
+    "@vercel/speed-insights": "latest"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "latest",
+    "typescript": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "@tailwindcss/postcss": "latest"
   }
 }
