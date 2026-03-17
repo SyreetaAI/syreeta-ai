@@ -344,7 +344,7 @@ function HeroSection() {
             through forensic classification, payment integrity audits, and buying behavior optimization.
           </p>
           <p className="text-base md:text-lg text-gray-500 mb-10 max-w-2xl">
-            {"Our Capital Leakage Diagnostic delivers boardroom-ready findings with named vendors, dollar amounts, and a prioritized recovery roadmap."}
+            {"We transform fragmented spend into quantifiable capital, using specialized audit layers designed to surface high-impact exposure in growth-stage organizations."}
           </p>
 
           {/* CTAs */}
