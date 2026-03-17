@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { 
   ShieldCheck, 
   BarChart3, 
   Search, 
   Zap, 
-  ChevronRight, 
   ArrowRight, 
   CheckCircle2, 
   Users, 
   Award, 
-  Briefcase 
+  Briefcase,
+  Lock,
+  Cpu
 } from 'lucide-react';
 import { Analytics } from "@vercel/analytics/react";
 
-// --- Components ---
-
 const TrustBadge = ({ icon: Icon, label, sublabel }: { icon: any, label: string, sublabel: string }) => (
   <div className="flex flex-col items-center p-4 text-center">
-    <div className="bg-orange-100 p-3 rounded-full mb-3 text-orange">
-      <Icon size={24} />
+    <div className="text-orange mb-3">
+      <Icon size={28} strokeWidth={1.5} />
     </div>
     <span className="text-navy font-bold text-lg">{label}</span>
     <span className="text-slate-500 text-sm">{sublabel}</span>
@@ -27,134 +26,191 @@ const TrustBadge = ({ icon: Icon, label, sublabel }: { icon: any, label: string,
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-orange-100">
+    <div className="min-h-screen bg-white font-sans selection:bg-orange-100 text-slate-900">
       <Analytics />
       
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="text-navy font-black text-2xl tracking-tighter">
             SYREETA<span className="text-orange">.AI</span>
           </div>
-          <div className="hidden md:flex gap-8 items-center text-sm font-medium text-navy/70">
-            <a href="#approach" className="hover:text-orange transition-colors">The Pivot</a>
-            <a href="#diagnostic" className="hover:text-orange transition-colors">Diagnostic</a>
-            <a href="#about" className="hover:text-orange transition-colors">Experience</a>
-            <button className="bg-navy text-white px-5 py-2.5 rounded-full hover:bg-orange transition-all">
-              Book the C-Suite
+          <div className="hidden md:flex gap-8 items-center text-sm font-medium">
+            <a href="#opportunity" className="hover:text-orange transition-colors">The Opportunity</a>
+            <a href="#approach" className="hover:text-orange transition-colors">The Strategy</a>
+            <a href="#about" className="hover:text-orange transition-colors">About</a>
+            <button className="bg-navy text-white px-6 py-2 rounded-full hover:bg-orange transition-all font-bold">
+              Inquire
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-32 overflow-hidden grid-bg">
+      {/* Hero */}
+      <section className="relative pt-24 pb-32 overflow-hidden grid-bg">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-100 text-orange px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-8">
-            <Award size={14} /> 25+ Years of Fortune 500 Expertise
+          <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-8">
+            <Briefcase size={14} /> Global Procurement Authority
           </div>
-          <h1 className="text-6xl md:text-7xl font-black text-navy leading-[0.9] mb-8 tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-black text-navy leading-[0.85] mb-8 tracking-tighter">
             C-Suite Strategy.<br />
-            <span className="text-orange">Accessible to Everyone.</span>
+            <span className="text-orange">For the Masses.</span>
           </h1>
           <p className="max-w-2xl mx-auto text-xl text-slate-600 mb-10 leading-relaxed">
-            I spent two decades in the corner offices of the world's largest firms. Now, I'm bringing those billion-dollar sourcing and AI frameworks to you.
+            Twenty-five years of Fortune 500 procurement expertise and Prosci® change leadership, now available as your on-demand executive partner.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button className="bg-orange text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-orange/20 hover:scale-105 transition-all flex items-center justify-center gap-2">
-              Get Your Executive Audit <ArrowRight size={20} />
-            </button>
-            <button className="bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all">
-              View Case Studies
+            <button className="bg-orange text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl shadow-orange/30 hover:scale-105 transition-all flex items-center justify-center gap-2">
+              Start Your Audit <ArrowRight size={20} />
             </button>
           </div>
         </div>
       </section>
 
-      {/* The "Trust Bar" */}
-      <section className="border-y border-slate-100 bg-slate-50/50">
-        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <TrustBadge icon={Briefcase} label="25+ Years" sublabel="Sourcing & Procurement" />
+      {/* Trust Bar */}
+      <section className="border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-12">
+          <TrustBadge icon={Award} label="25+ Years" sublabel="Sourcing Excellence" />
           <TrustBadge icon={ShieldCheck} label="Prosci®" sublabel="Certified Change Lead" />
           <TrustBadge icon={BarChart3} label="$10B+" sublabel="Managed Spend" />
-          <TrustBadge icon={Users} label="C-Suite Ally" sublabel="Fortune 500 Veteran" />
+          <TrustBadge icon={Cpu} label="AI Native" sublabel="Digital Workforce" />
         </div>
       </section>
 
-      {/* The Pivot Section */}
+      {/* Opportunity - Exact References Added */}
+      <section id="opportunity" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-black text-navy mb-16 text-center">The Risk of Inaction</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                stat: "80%",
+                text: "of organizations face significant AI integration hurdles due to poor data sourcing.",
+                source: "Gartner 2024 Strategic Planning Report",
+                url: "https://www.gartner.com"
+              },
+              {
+                stat: "$4.45M",
+                text: "Average cost of a data breach in 2024, often triggered by unvetted third-party AI tools.",
+                source: "IBM Cost of a Data Breach Report",
+                url: "https://www.ibm.com/reports/data-breach"
+              },
+              {
+                stat: "30%",
+                text: "Expected productivity gap between AI-enabled firms and legacy competitors by 2026.",
+                source: "McKinsey Global Institute",
+                url: "https://www.mckinsey.com/mgi"
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-3xl border border-slate-200">
+                <div className="text-4xl font-black text-orange mb-4">{item.stat}</div>
+                <p className="text-slate-600 mb-6 font-medium">{item.text}</p>
+                <a href={item.url} target="_blank" className="text-xs font-bold text-navy hover:text-orange uppercase tracking-widest flex items-center gap-1">
+                  Reference: {item.source} <ArrowRight size={12} />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Approach - Cleaned up dashes & unnecessary boxes */}
       <section id="approach" className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-5xl font-black text-navy mb-8 tracking-tighter">The Strategy</h2>
+              <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+                I leverage a unique blend of human institutional knowledge and autonomous AI agents to audit, optimize, and secure your procurement pipeline.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 text-orange"><CheckCircle2 size={24} /></div>
+                  <div>
+                    <h4 className="font-bold text-navy">Localized Processing</h4>
+                    <p className="text-slate-500">I perform all forensic work outside the cloud, either on my secure local environment or directly within your infrastructure.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 text-orange"><CheckCircle2 size={24} /></div>
+                  <div>
+                    <h4 className="font-bold text-navy">Prosci® Transitioning</h4>
+                    <p className="text-slate-500">I don't just deploy tech; I lead the people through the change to ensure 100% adoption.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-navy rounded-3xl p-12 text-white shadow-2xl">
+              <h3 className="text-2xl font-bold mb-8">Verified Outcomes</h3>
+              <div className="space-y-8">
+                <div>
+                  <div className="text-3xl font-black text-orange">$10B+</div>
+                  <div className="text-slate-400">Directly managed spend for Fortune 500 institutions.</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-black text-orange">20-30%</div>
+                  <div className="text-slate-400">Typical efficiency gains in procurement cycles post-audit.</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-black text-orange">Zero-Leakage</div>
+                  <div className="text-slate-400">Contract compliance standard for all forensic engagements.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Diagnostic - Minimalist & Artifact-focused */}
+      <section className="py-24 bg-navy text-white rounded-[4rem] mx-4 mb-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-5xl font-black mb-6 tracking-tighter">The Executive Diagnostic</h2>
+          <p className="text-slate-400 text-lg mb-12">
+            A high-level scan of your current risk profile. Detailed modules and the forensic roadmap are provided as a custom artifact following our discovery call.
+          </p>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10">
+              <span className="font-bold">AI Sourcing Forensic Audit</span>
+              <span className="text-orange font-mono text-sm uppercase tracking-widest">Available</span>
+            </div>
+            <div className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10">
+              <span className="font-bold">Contract Integrity Analysis</span>
+              <span className="text-orange font-mono text-sm uppercase tracking-widest">Available</span>
+            </div>
+            <button className="w-full bg-orange py-6 rounded-2xl font-black text-2xl hover:bg-white hover:text-navy transition-all mt-8">
+              REQUEST ACCESS
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* About - Honest Solo Branding */}
+      <section id="about" className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div className="bg-slate-100 aspect-square rounded-3xl flex items-center justify-center p-12">
+             <div className="text-center">
+                <div className="text-navy font-black text-4xl mb-2 italic">"One Executive."</div>
+                <div className="text-orange font-bold text-xl uppercase tracking-widest">Infinite Scale.</div>
+             </div>
+          </div>
           <div>
-            <h2 className="text-4xl font-black text-navy mb-6 tracking-tight">
-              Why the "Masses" need <br /><span className="text-orange">C-Suite Intelligence.</span>
-            </h2>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              For years, elite procurement strategy was gated behind massive consulting fees. In the AI era, that gap is a liability. I’ve stepped out of the corporate world to democratize the frameworks that win.
+            <h2 className="text-4xl font-black text-navy mb-6">About Me</h2>
+            <p className="text-lg text-slate-600 mb-6">
+              I am a solo executive consultant. I don't maintain a bloated staff or bill you for junior associates. When you hire me, you get 25 years of Fortune 500 experience directly.
             </p>
-            <ul className="space-y-4">
-              {[
-                "Fortune 500 Forensic Audits for Mid-Market firms.",
-                "AI Change Management (Prosci® Certified).",
-                "Supply Chain integrity that scales with your growth."
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-navy font-semibold">
-                  <CheckCircle2 className="text-orange" size={20} /> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-navy rounded-3xl p-10 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-8 opacity-10">
-              <Search size={200} />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">The "Syreeta" Advantage</h3>
-            <p className="text-slate-300 mb-6 italic">
-              "I don't just find gaps; I build bridges. My goal is to make your business run with the same precision I demanded at Capital One."
+            <p className="text-lg text-slate-600 mb-8">
+              To deliver at scale, I deploy a custom-built digital workforce: autonomous AI agents with specialized personalities that handle data-heavy forensic tasks. This allows me to provide C-suite level output at a fraction of the traditional cost.
             </p>
-            <div className="h-1 w-20 bg-orange mb-6"></div>
-            <div className="text-sm font-medium uppercase tracking-widest text-orange">Founder & CEO</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Capital Diagnostic Tool (Remains as a Product for all) */}
-      <section id="diagnostic" className="py-24 bg-slate-900 text-white rounded-[3rem] mx-4">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-black mb-6">The Executive Diagnostic</h2>
-          <p className="text-slate-400 mb-12">The same forensic tool used at the highest levels, now available for your audit.</p>
-          <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <div className="text-xs font-mono text-slate-500">SYSTEM READY: V1.0.4</div>
-            </div>
-            <div className="space-y-6 text-left">
-              <div className="p-4 bg-white/5 rounded-lg border border-white/10 flex items-center justify-between">
-                <span>AI Sourcing Forensic Audit</span>
-                <span className="text-orange text-sm font-bold">READY</span>
-              </div>
-              <div className="p-4 bg-white/5 rounded-lg border border-white/10 flex items-center justify-between">
-                <span>Contract Integrity Scan</span>
-                <span className="text-orange text-sm font-bold">READY</span>
-              </div>
-              <button className="w-full bg-orange text-white py-4 rounded-xl font-black text-xl hover:scale-[1.02] transition-all">
-                RUN DIAGNOSTIC NOW
-              </button>
+            <div className="flex items-center gap-4 p-4 bg-orange-50 rounded-xl border border-orange-100">
+               <Lock className="text-orange" size={24} />
+               <span className="text-sm font-bold text-navy">Work is processed locally on secure air-gapped hardware.</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 text-center text-slate-400 text-sm">
-        <div className="mb-6 text-navy font-bold text-xl tracking-tighter">
-          SYREETA<span className="text-orange">.AI</span>
-        </div>
-        © 2026 Syreeta AI LLC. All rights reserved. <br />
-        Built with C-Suite Precision.
+      <footer className="py-16 text-center border-t border-slate-100">
+        <div className="text-navy font-black text-2xl mb-4">SYREETA<span className="text-orange">.AI</span></div>
+        <div className="text-slate-400 text-sm">© 2026 Syreeta AI LLC. All rights reserved.</div>
       </footer>
     </div>
   );
