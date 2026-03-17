@@ -1,45 +1,26 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Syreeta.ai | AI-Powered Capital Leakage Diagnostic',
-  description: 'Surface every dollar your current tools miss. Syreeta.ai delivers AI-powered spend classification, duplicate payment audits, and maverick spend mapping — in 72 hours.',
-  generator: 'Syreeta AI LLC',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
-}
+  title: "Syreeta AI | Forensic Audit & Procurement",
+  description: "High-end AI auditing and procurement consulting for the Fortune 500.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className={inter.className}>
         {children}
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
